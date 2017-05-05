@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Vuejs简单示例</title>
+        <!--引入开发版本vue.js，在开发版本中会有很多友好的提示-->
+        <script src='../001/vue.js'></script>
+        <!--下面为cdn引用方式，实验中我们使用下载好的vue.js
+        <script src='https://unpkg.com/vue@2.1.10/dist/vue.js'></script>-->
+
+    </head>
+    <body>
+        <!--定义一个id为demo的div-->
+        <div id="demo">
+
+      	<!--此处的Show和Hide为在vuejs中定义的变量，放在两个花括号中-->
+        <span v-show="Show">你能看到我!</span>
+        <span v-show="Hide">你能看到我吗!</span>
+        <script>
+            <!--实例化vuejs-->
+            new Vue({
+            <!--el指定的id为css选择器-->
+                el:'#demo',
+            <!--我们的变量统统放到data中-->
+                data:{
+            <!--此处声明的变量msg内容为实验楼-->
+                    Show:true,
+                    Hide:false
+                }
+            })
+    </script>
+    </body>
+</html>

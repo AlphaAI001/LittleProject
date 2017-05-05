@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js指令示例</title>
+    <script src='../001/vue.js'></script>
+</head>
+<body>
+    <div id="demo">
+        <div v-for="(item,index) in items">
+          {{ item.text }}
+        </div>
+        <div v-for="item in items">
+          {{ item.name }}
+        </div>
+        <div v-for="item in items">
+           {{ item.text }}{{ item.name }}
+        </div>
+
+        <div v-for="item in items">
+           {{ item }}
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:'#demo',
+        data:{
+            items:[
+                {text:'hello ',name:'实验楼'},
+                {text:'hello ',name:'vuejs'},
+                {text:'hello ',name:'html'},
+                {text:'hello ',name:'js'},
+            ]
+        }
+    })
+</script>

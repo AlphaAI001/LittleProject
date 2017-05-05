@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Vuejs简单示例</title>
+    <script src='../001/vue.js'></script>
+</head>
+<body>
+    <div id="demo">
+        <p>第一组</p>
+        <p>预期显示“你能看到我!”</p>
+        <span v-if="Show">你能看到我!</span>
+        <span v-else>你能看到我吗!</span>
+        <br>
+        <p>第二组</p>
+        <p>预期显示“你能看到我吗!”</p>
+        <span v-if="hide">你能看到我!</span>
+        <span v-else>你能看到我吗!</span>
+        <br>
+        <p>第三组</p>
+        <p>预期显示“你真的能看到我吗!”</p>
+        <span v-if="hide">你能看到我!</span>
+        <span v-else-if="hide">你能看到我吗!</span>
+        <span v-else>你真的能看到我吗!</span>
+
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:'#demo',
+        data:{
+            Show:true,
+            hide:false
+        }
+    })
+</script>
